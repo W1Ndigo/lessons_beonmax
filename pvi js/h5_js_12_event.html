@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title> Объект event</title>
+<script>
+
+     function f_click(e)
+     {
+	var div1 = document.getElementById("div1");
+	div1.innerHTML += "Нажали"+e.target + "<br>";
+     }
+   
+     function f_click2(e)
+     {
+	var div1 = document.getElementById("div1");
+       	div1.innerHTML += "Клиентские: X:"+e.clientX + " Y:" + e.clientY+" Экранные: X:"+e.screenX + " Y:" + e.screenY+"<br>";
+	div1.innerHTML += "Нажата кнопка: "+e.button+"<br>";
+     } 
+
+     function f_press(e)
+     {
+	var div1 = document.getElementById("div1");
+       	div1.innerHTML += "Код нажатой клавиши:"+e.keyCode+" "+e.charCode+"<br>";
+     } 
+
+</script>
+</head>
+<body id="body1" onclick="f_click2(event)" onkeypress="f_press(event)">
+ <p id="p1" onclick="f_click()">
+	Щёлкните мышью
+   <span id="span1" style="color:red" onclick="f_click(event)"> здесь </span> </p>
+   <span id="span2" style="color:blue" onclick="f_click(event)"> и здесь </span> </p>
+   <div id="div1"> </div>
+</body>
+</html>

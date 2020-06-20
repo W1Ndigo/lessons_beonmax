@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title> Подавление всплывания событий</title>
+<script>
+
+     function f_print(str)
+     {
+	var div1 = document.getElementById("div1");
+	div1.innerHTML += str + "<br>";
+	
+     }
+     function f_print2(str, e)
+     {
+	var div1 = document.getElementById("div1");
+	div1.innerHTML += str + "<br>";
+	e = e || window.event;
+	if (e.stopPropagation) e.stopPropagation();
+	else e.cancelBubble = true;
+     }
+
+</script>
+</head>
+<body onclick="f_print('onclick - body')">
+   <p onclick="f_print2('onclick - p')">
+	Щёлкните мышью
+   <span style="color:red" onclick="f_print('onclick - span')"> здесь </span> 
+   <span style="color:blue" onclick="f_print2('onclick - span2',event)"> и здесь </span> </p>
+   <div id="div1"> </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title> Класс String </title>
+<script>
+     function WorkWithString()
+     {
+	var s=new String("Hello, World!");	
+	document.writeln(s);
+	document.writeln(s.length);
+	document.writeln(s.toUpperCase());
+	document.writeln(s.toLowerCase());
+	document.writeln(s[7]);
+	document.writeln(s.charAt(7));
+	document.writeln(s.substr(0,5));
+	document.writeln(s.substr(7));
+	document.writeln(s.indexOf("o"));
+	document.writeln(s.indexOf("He",5));
+	document.writeln(s.lastIndexOf("o"));
+	var m=s.split(",");
+	document.writeln(m[0]);
+	document.writeln(m[1]);
+     }
+WorkWithString();
+</script>
+</head>
+<body>
+</body>
+</html> 

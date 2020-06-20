@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title> Класс Arguments</title>
+<script>
+
+     function f_mul(x,y)
+     {
+	var p=1;
+	for(var i=0; i<arguments.length; i++)
+		p*=arguments[i];
+	return p;
+	
+     }
+document.writeln(f_mul(1,2,3,4,6,7));
+document.writeln(f_mul(1,-2,4));
+</script>
+</head>
+<body>
+</body>
+</html> 

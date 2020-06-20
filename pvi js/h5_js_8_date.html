@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title> Класс Date</title>
+<script>
+     function WorkWithDate()
+     {
+	var d = new Date();
+	document.writeln(d.toString());
+	document.writeln(d.getFullYear());
+	document.writeln(d.getMonth()+1);
+	document.writeln(d.getDay());
+	document.writeln(d.getHours());
+	document.writeln(d.getMinutes());
+	document.writeln(d.getSeconds());
+	document.writeln(d.getMilliseconds());
+	document.writeln(d.getTime());
+	d.setYear(2016);
+	document.writeln(d.getFullYear());
+	document.writeln("<br>");
+	d1 = new Date(2020, 2, 8, 14, 30, 23);
+	document.writeln(d1.toLocaleString());
+	document.writeln(d1.getDay());
+	document.writeln(d1.getDate());
+	
+     }
+WorkWithDate();
+</script>
+</head>
+<body>
+</body>
+</html> 

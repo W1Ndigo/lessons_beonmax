@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title> Оператор if </title>
+<script>
+function Validate ( form ) {
+       if (form.value <= "17")  {
+       document.writeln("Вы еще несовершеннолетний"); }
+       else  {
+	document.writeln("Вы совершеннолетний");
+	}
+ }
+</script>
+</head>
+<body> 
+<body>
+ <form  name="MyForm">
+ Имя    : <input type="text"  size=30  name="name">
+ Возраст: <input type="number"  size=5  name="age"> <hr>
+  <input type="button"  value=«Ввод данных" onClick="Validate(this.form.age)">
+ </form>
+</body>
+
+</body> 
+</html> 

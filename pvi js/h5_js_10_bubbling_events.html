@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<title> Всплывание событий</title>
+<script>
+
+     function f_print(str)
+     {
+	var div1 = document.getElementById("div1");
+	div1.innerHTML += str + "<br>";
+	
+     }
+
+</script>
+</head>
+<body onclick="f_print('onclick - body');">
+   <p onclick="f_print('onclick - p');">
+	Щёлкните мышью
+   <span style="color:red" onclick="f_print('onclick - span');"> здесь </span> </p>
+   <div id="div1"> </div>
+</body>
+</html>
